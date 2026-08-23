@@ -6,7 +6,9 @@ Survival Dreams modifies Minecraft's mechanics, reworks existing mobs, and adds 
 
 Survival Dreams is an open source mod, and the code is on this GitHub.
 
-- [Modrinth](https://modrinth.com/project/aUaD6KzZ)
+## Download
+
+Get the mod from [Modrinth](https://modrinth.com/project/aUaD6KzZ).
 
 ## Also Included
 
