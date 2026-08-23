@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "survival-dreams:block/sealed_end_portal_frame" },
+    "facing=south": { "model": "survival-dreams:block/sealed_end_portal_frame", "y": 180 },
+    "facing=east": { "model": "survival-dreams:block/sealed_end_portal_frame", "y": 90 },
+    "facing=west": { "model": "survival-dreams:block/sealed_end_portal_frame", "y": 270 }
+  }
+}

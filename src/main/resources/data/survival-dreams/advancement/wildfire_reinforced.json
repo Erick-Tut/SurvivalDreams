@@ -1,0 +1,26 @@
+{
+  "parent": "survival-dreams:obtain_ender_key",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:wildfire_core"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.wildfire_reinforced.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.wildfire_reinforced.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "applied_core": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipe_id": "survival-dreams:wildfire_reinforce"
+      }
+    }
+  }
+}

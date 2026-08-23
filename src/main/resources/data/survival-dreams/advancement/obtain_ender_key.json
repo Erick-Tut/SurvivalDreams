@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:ender_key"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.obtain_ender_key.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.obtain_ender_key.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_key": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          { "items": "survival-dreams:ender_key" }
+        ]
+      }
+    }
+  }
+}

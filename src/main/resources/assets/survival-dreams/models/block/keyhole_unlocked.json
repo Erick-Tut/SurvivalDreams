@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "top": "survival-dreams:block/end_core_top",
+    "bottom": "survival-dreams:block/end_core_bottom",
+    "side": "survival-dreams:block/end_core_side"
+  }
+}

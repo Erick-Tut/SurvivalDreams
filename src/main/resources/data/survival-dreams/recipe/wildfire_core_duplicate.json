@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DCD",
+    "DBD",
+    "DDD"
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "C": "survival-dreams:wildfire_core",
+    "B": "minecraft:blaze_rod"
+  },
+  "result": {
+    "id": "survival-dreams:wildfire_core",
+    "count": 2
+  }
+}

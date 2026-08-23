@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "unlocked=false": { "model": "survival-dreams:block/keyhole" },
+    "unlocked=true": { "model": "survival-dreams:block/keyhole_unlocked" }
+  }
+}

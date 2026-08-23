@@ -1,0 +1,16 @@
+{
+  "placement": {
+    "type": "minecraft:concentric_rings",
+    "count": 128,
+    "distance": 32,
+    "preferred_biomes": "#minecraft:is_overworld",
+    "salt": 12345,
+    "spread": 3
+  },
+  "structures": [
+    {
+      "structure": "survival-dreams:portal_room",
+      "weight": 1
+    }
+  ]
+}

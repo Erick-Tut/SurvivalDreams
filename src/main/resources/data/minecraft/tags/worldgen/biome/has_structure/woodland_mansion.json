@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_overworld"
+  ],
+  "remove": [
+    "#minecraft:is_ocean",
+    "#minecraft:is_beach",
+    "#minecraft:is_river",
+    "minecraft:frozen_ocean",
+    "minecraft:deep_frozen_ocean",
+    "minecraft:mushroom_fields",
+    "minecraft:dripstone_caves",
+    "minecraft:lush_caves",
+    "minecraft:deep_dark"
+  ]
+}

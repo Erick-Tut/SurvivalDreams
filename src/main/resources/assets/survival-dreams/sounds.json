@@ -1,0 +1,88 @@
+{
+  "wildfire_shoot": {
+    "sounds": ["survival-dreams:wildfire/shoot"]
+  },
+  "wildfire_shield_debris_impact": {
+    "sounds": ["survival-dreams:wildfire/shield_debris_impact"]
+  },
+  "wildfire_death": {
+    "sounds": ["survival-dreams:wildfire/death"]
+  },
+  "wildfire_hurt": {
+    "sounds": ["survival-dreams:wildfire/hurt"]
+  },
+  "wildfire_crackle": {
+    "sounds": ["survival-dreams:wildfire/crackle"]
+  },
+  "wildfire_shoot_vocal": {
+    "sounds": ["survival-dreams:wildfire/shoot_vocal"]
+  },
+  "wildfire_idle": {
+    "sounds": ["survival-dreams:wildfire/idle"]
+  },
+  "wildfire_shield_broken": {
+    "sounds": ["survival-dreams:wildfire/shield_broken"]
+  },
+  "wildfire_shield_break_vocal": {
+    "sounds": ["survival-dreams:wildfire/shield_break_vocal"]
+  },
+  "wildfire_shockwave": {
+    "sounds": ["survival-dreams:wildfire/shockwave"]
+  },
+  "wildfire_step": {
+    "sounds": ["survival-dreams:wildfire/step"]
+  },
+  "wildfire_stun": {
+    "sounds": ["survival-dreams:wildfire/stun"]
+  },
+
+  "watchling_attack": {
+    "sounds": ["survival-dreams:watchling/attack"]
+  },
+  "watchling_death": {
+    "sounds": ["survival-dreams:watchling/death"]
+  },
+  "watchling_heavy_attack": {
+    "sounds": ["survival-dreams:watchling/heavy_attack"]
+  },
+  "watchling_hurt": {
+    "sounds": ["survival-dreams:watchling/hurt"]
+  },
+  "watchling_idle": {
+    "sounds": ["survival-dreams:watchling/idle"]
+  },
+  "watchling_step": {
+    "sounds": ["survival-dreams:watchling/step"]
+  },
+  "watchling_stun": {
+    "sounds": ["survival-dreams:watchling/stun"]
+  },
+
+  "endersent_attack": {
+    "sounds": ["survival-dreams:endersent/attack"]
+  },
+  "endersent_deadly_escape": {
+    "sounds": ["survival-dreams:endersent/deadly_escape"]
+  },
+  "endersent_death": {
+    "sounds": ["survival-dreams:endersent/death"]
+  },
+  "endersent_hurt": {
+    "sounds": ["survival-dreams:endersent/hurt"]
+  },
+  "endersent_idle_smash": {
+    "sounds": ["survival-dreams:endersent/idle_smash"]
+  },
+  "endersent_idle": {
+    "sounds": ["survival-dreams:endersent/idle"]
+  },
+  "endersent_step": {
+    "sounds": ["survival-dreams:endersent/step"]
+  },
+  "endersent_stun": {
+    "sounds": ["survival-dreams:endersent/stun"]
+  },
+  "endersent_teleport_smash": {
+    "sounds": ["survival-dreams:endersent/teleport_smash"]
+  }
+}

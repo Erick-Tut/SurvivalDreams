@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "survival-dreams:item/watchling_spawn_egg"
+  }
+}

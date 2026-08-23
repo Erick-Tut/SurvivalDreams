@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "survival-dreams:block/end_portal_anchor_top",
+    "bottom": "survival-dreams:block/end_portal_anchor_side",
+    "side": "survival-dreams:block/end_portal_anchor_side"
+  }
+}

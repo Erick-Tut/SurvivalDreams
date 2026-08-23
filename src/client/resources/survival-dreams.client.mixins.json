@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "dev.wux.survivaldreams.client.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"FoxRenderStateMixin",
+		"FoxRendererMixin",
+		"HappyGhastRenderStateMixin",
+		"HappyGhastRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

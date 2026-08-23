@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OEO",
+    "OKO",
+    "OOO"
+  ],
+  "key": {
+    "O": "minecraft:obsidian",
+    "E": "minecraft:ender_eye",
+    "K": "survival-dreams:ender_key"
+  },
+  "result": {
+    "id": "survival-dreams:end_portal_anchor",
+    "count": 1
+  }
+}

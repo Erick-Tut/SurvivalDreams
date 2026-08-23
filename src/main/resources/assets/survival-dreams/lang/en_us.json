@@ -1,0 +1,60 @@
+{
+  "itemGroup.survival-dreams.survival_dreams_tab": "Survival Dreams",
+
+  "item.survival-dreams.potem": "Potem",
+  "item.survival-dreams.cheart": "Cheart",
+  "item.survival-dreams.ender_key": "Ender key",
+  "item.survival-dreams.keyhole": "Key Hole",
+  "item.survival-dreams.wildfire_spawn_egg": "Wildfire Spawn Egg",
+  "item.survival-dreams.endersent_spawn_egg": "Endersent Spawn Egg",
+  "item.survival-dreams.watchling_spawn_egg": "Watchling Spawn Egg",
+  "item.survival-dreams.illusioner_spawn_egg": "Illusioner Spawn Egg",
+  "item.survival-dreams.wildfire_core": "Wildfire Core",
+  "item.survival-dreams.sealed_end_portal_frame": "Sealed End Portal Frame",
+  "item.survival-dreams.end_portal_anchor": "End Portal Anchor",
+
+
+  "trim_pattern.survival-dreams.wildfire": "Wildfire",
+  "trim_material.survival-dreams.wildfire_core": "Wildfire Core",
+
+  "entity.survival-dreams.watchling": "Watchling",
+  "entity.survival-dreams.endersent": "Endersent",
+  "entity.survival-dreams.endersent_default": "Endersent",
+  "entity.survival-dreams.wildfire": "Wildfire",
+  "entity.survivaldreams.wildfire.shields": "Shields",
+  "entity.survivaldreams.steam_charge": "Steam Charge",
+  "entity.survivaldreams.firesnowgolem": "Fire Snow Golem",
+
+  "block.survival-dreams.end_portal_anchor.wrong_dimension": "The anchor only works from the Overworld.",
+  "block.survival-dreams.end_portal_anchor": "End Portal Anchor",
+
+  "item.survival-dreams.wildfire_core.applies_to": "Applies to:",
+  "item.survival-dreams.wildfire_core.applies_to.armor": " Armor",
+
+  "upgrade.survivaldreams.wildfire_reinforcement": "Wildfire Reinforcement",
+  "upgrade.survivaldreams.damage_resistance": "Damage Resistance",
+  "upgrade.survivaldreams.fire_resistance": "Fire Resistance",
+
+  "advancements.adventure.sleep_in_bed.title": "Can't Wake Up",
+  "advancements.adventure.sleep_in_bed.description": "Sleep in a bed... if you can",
+
+  "advancements.adventure.hero_of_the_village.title": "Village Savior",
+  "advancements.adventure.hero_of_the_village.description": "Successfully defend a village from a golem uprising",
+
+  "advancements.survival-dreams.lost_heart.title": "You've Lost a Heart",
+  "advancements.survival-dreams.lost_heart.description": "A Potem drained your heart to save you",
+
+  "advancements.survival-dreams.returned_heart.title": "You've Returned Your Heart",
+  "advancements.survival-dreams.returned_heart.description": "Chearts beat with the life you once lost",
+
+  "advancements.survival-dreams.obtain_ender_key.title": "Key to the Beyond",
+  "advancements.survival-dreams.obtain_ender_key.description": "Obtain an Ender Key from the Endersent guardian",
+
+  "advancements.survival-dreams.wildfire_reinforced.title": "Wildfire Reinforcement",
+  "advancements.survival-dreams.wildfire_reinforced.description": "Apply a Wildfire Core to a piece of armor",
+
+  "advancements.survival-dreams.golem_uprising_survived.title": "Guardian Against the Golems",
+  "advancements.survival-dreams.golem_uprising_survived.description": "Survive a golem uprising and emerge victorious",
+
+  "effect.survival-dreams.voided": "Voided"
+}

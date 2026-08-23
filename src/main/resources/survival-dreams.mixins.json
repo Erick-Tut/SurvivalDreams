@@ -1,0 +1,35 @@
+{
+	"required": true,
+	"package": "dev.wux.survivaldreams.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"LivingEntityMixin",
+		"EndermanWaterImmuneMixin",
+		"CreeperExplosionEffectMixin",
+		"CreeperPowerMixin",
+		"GhastFireballMixin",
+		"CatVariantAccessor",
+		"FoxSpawnRuleMixin",
+		"MobGoalSelectorAccessor",
+		"BlazeImmunityMixin",
+		"BlazeWaterImmuneMixin",
+		"GolemAttackEveryoneMixin",
+		"RaidGolemMixin",
+		"CreakingBehaviorMixin",
+		"LivingEntityVoidedMixin",
+		"WildfireResistanceMixin",
+		"WildfireTooltipMixin",
+		"EnderDragonMixin",
+		"EnderDragonAttributesMixin",
+		"DragonChargePlayerPhaseMixin",
+		"DragonLandingPhaseMixin",
+		"DragonFireballMixin",
+		"DragonStrafePlayerPhaseMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}

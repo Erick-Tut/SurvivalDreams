@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/end_portal_frame",
+  "textures": {
+    "top": "survival-dreams:block/end_portal_corrupted_frame_top",
+    "particle": "minecraft:block/end_portal_frame_side"
+  }
+}

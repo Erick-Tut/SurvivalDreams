@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:potem"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.lost_heart.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.lost_heart.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "used_potem": {
+      "trigger": "minecraft:used_totem",
+      "conditions": {
+        "item": {
+          "items": ["survival-dreams:potem"]
+        }
+      }
+    }
+  }
+}

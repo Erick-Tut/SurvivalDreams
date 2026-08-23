@@ -1,0 +1,60 @@
+{
+  "itemGroup.survival-dreams.survival_dreams_tab": "Survival Dreams",
+
+  "item.survival-dreams.potem": "Potem",
+  "item.survival-dreams.cheart": "Cheart",
+  "item.survival-dreams.ender_key": "Llave del End",
+  "item.survival-dreams.keyhole": "Cerradura",
+  "item.survival-dreams.wildfire_spawn_egg": "Generar Wildfire",
+  "item.survival-dreams.endersent_spawn_egg": "Generar Endersent",
+  "item.survival-dreams.watchling_spawn_egg": "Generar Watchling",
+  "item.survival-dreams.illusioner_spawn_egg": "Generar Illusioner",
+
+  "item.survival-dreams.wildfire_core": "Núcleo de Wildfire",
+  "item.survival-dreams.sealed_end_portal_frame": "Marco de portal del End sellado",
+  "item.survival-dreams.end_portal_anchor": "Ancla del portal del End",
+
+  "entity.survival-dreams.watchling": "Watchling",
+  "entity.survival-dreams.endersent": "Endersent",
+  "entity.survival-dreams.endersent_default": "Endersent",
+  "entity.survival-dreams.wildfire": "Wildfire",
+  "entity.survivaldreams.wildfire.shields": "Escudos",
+  "entity.survivaldreams.steam_charge": "Steam Charge",
+  "entity.survivaldreams.firesnowgolem": "Fire Snow Golem",
+
+  "trim_pattern.survival-dreams.wildfire": "Wildfire",
+  "trim_material.survival-dreams.wildfire_core": "Núcleo de Wildfire",
+
+  "block.survival-dreams.end_portal_anchor.wrong_dimension": "El ancla solo funciona desde el Overworld.",
+  "block.survival-dreams.end_portal_anchor": "Ancla del portal del End",
+
+  "item.survival-dreams.wildfire_core.applies_to": "Se aplica a:",
+  "item.survival-dreams.wildfire_core.applies_to.armor": " Armadura",
+
+  "upgrade.survivaldreams.wildfire_reinforcement": "Refuerzo de Wildfire",
+  "upgrade.survivaldreams.damage_resistance": "Resistencia al daño",
+  "upgrade.survivaldreams.fire_resistance": "Resistencia al fuego",
+
+  "advancements.adventure.sleep_in_bed.title": "No puedes despertar",
+  "advancements.adventure.sleep_in_bed.description": "Duerme en una cama... si es que puedes",
+
+  "advancements.adventure.hero_of_the_village.title": "Salvador de la aldea",
+  "advancements.adventure.hero_of_the_village.description": "Defiende con éxito una aldea de un levantamiento de golems",
+
+  "advancements.survival-dreams.lost_heart.title": "Has perdido un corazón",
+  "advancements.survival-dreams.lost_heart.description": "Un Potem drenó tu corazón para salvarte",
+
+  "advancements.survival-dreams.returned_heart.title": "Has devuelto tu corazón",
+  "advancements.survival-dreams.returned_heart.description": "Los Chearts laten con la vida que una vez perdiste",
+
+  "advancements.survival-dreams.obtain_ender_key.title": "Llave hacia el más allá",
+  "advancements.survival-dreams.obtain_ender_key.description": "Obtén una Llave del End del guardián Endersent",
+
+  "advancements.survival-dreams.wildfire_reinforced.title": "Refuerzo de Wildfire",
+  "advancements.survival-dreams.wildfire_reinforced.description": "Aplica un Núcleo de Wildfire a una pieza de armadura",
+
+  "advancements.survival-dreams.golem_uprising_survived.title": "Guardián contra los golems",
+  "advancements.survival-dreams.golem_uprising_survived.description": "Sobrevive a un levantamiento de golems y sal victorioso",
+
+  "effect.survival-dreams.voided": "Vaciado"
+}

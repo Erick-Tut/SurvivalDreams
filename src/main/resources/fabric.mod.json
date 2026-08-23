@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "survival-dreams",
+	"version": "${version}",
+	"name": "Survival Dreams",
+	"description": "A Survival but harder",
+	"authors": [
+		"Wuxsen78"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/survival-dreams/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.wux.survivaldreams.SurvivalDreams"
+		],
+		"client": [
+			"dev.wux.survivaldreams.client.SurvivalDreamsClient"
+		]
+	},
+	"mixins": [
+		"survival-dreams.mixins.json",
+		{
+			"config": "survival-dreams.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
