@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:mystery_bottle"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.mystery_roulette.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.mystery_roulette.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "drank_mystery_bottle": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["survival-dreams:mystery_bottle"]
+        }
+      }
+    }
+  }
+}

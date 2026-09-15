@@ -24,8 +24,12 @@ public class ModSpawnEggs {
     public static final Item WILDFIRE_SPAWN_EGG =
             registerSpawnEgg("wildfire_spawn_egg", ModEntityTypes.WILDFIRE);
 
+    public static final Item PHANTOM_FAMILIAR_SPAWN_EGG =
+            registerSpawnEgg("phantom_familiar_spawn_egg", ModEntityTypes.PHANTOM_FAMILIAR);
+
     public static final Item ILLUSIONER_SPAWN_EGG =
             registerSpawnEgg("illusioner_spawn_egg", EntityType.ILLUSIONER);
+
 
     private static Item registerSpawnEgg(
             String name,
@@ -52,6 +56,7 @@ public class ModSpawnEggs {
                     entries.accept(ENDERSENT_SPAWN_EGG);
                     entries.accept(WILDFIRE_SPAWN_EGG);
                     entries.accept(ILLUSIONER_SPAWN_EGG);
+                    entries.accept(PHANTOM_FAMILIAR_SPAWN_EGG);
                 });
 
         SurvivalDreams.LOGGER.info("[SurvivalDreams] Spawn eggs registrados");

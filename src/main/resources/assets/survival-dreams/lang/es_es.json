@@ -5,10 +5,16 @@
   "item.survival-dreams.cheart": "Cheart",
   "item.survival-dreams.ender_key": "Llave del End",
   "item.survival-dreams.keyhole": "Cerradura",
+  "item.survival-dreams.lunar_wand": "Varita Lunar",
+  "item.survival-dreams.crimson_membrane": "Membrana Carmesí",
+  "item.survival-dreams.cheese_capra": "Queso Capra",
+  "item.survival-dreams.mystery_bottle": "Botella Misteriosa",
+  "item.survival-dreams.mystery_dust": "Polvo Misterioso",
   "item.survival-dreams.wildfire_spawn_egg": "Generar Wildfire",
   "item.survival-dreams.endersent_spawn_egg": "Generar Endersent",
   "item.survival-dreams.watchling_spawn_egg": "Generar Watchling",
   "item.survival-dreams.illusioner_spawn_egg": "Generar Illusioner",
+  "item.survival-dreams.phantom_familiar_spawn_egg": "Generar Phantom Familiar",
 
   "item.survival-dreams.wildfire_core": "Núcleo de Wildfire",
   "item.survival-dreams.sealed_end_portal_frame": "Marco de portal del End sellado",
@@ -18,6 +24,7 @@
   "entity.survival-dreams.endersent": "Endersent",
   "entity.survival-dreams.endersent_default": "Endersent",
   "entity.survival-dreams.wildfire": "Wildfire",
+  "entity.survival-dreams.phantom_familiar": "Phantom Familiar",
   "entity.survivaldreams.wildfire.shields": "Escudos",
   "entity.survivaldreams.steam_charge": "Steam Charge",
   "entity.survivaldreams.firesnowgolem": "Fire Snow Golem",
@@ -56,5 +63,19 @@
   "advancements.survival-dreams.golem_uprising_survived.title": "Guardián contra los golems",
   "advancements.survival-dreams.golem_uprising_survived.description": "Sobrevive a un levantamiento de golems y sal victorioso",
 
-  "effect.survival-dreams.voided": "Vaciado"
+  "advancements.survival-dreams.mystery_roulette.title": "A la ruleta",
+  "advancements.survival-dreams.mystery_roulette.description": "Beber una Mystery Bottle por primera vez",
+
+  "advancements.survival-dreams.little_security.title": "Dándote un poco de seguridad",
+  "advancements.survival-dreams.little_security.description": "Comer Capra Cheese",
+
+  "advancements.survival-dreams.lunar_wand.title": "¿En verdad la luna era de queso?",
+  "advancements.survival-dreams.lunar_wand.description": "Activar la Lunar Wand",
+
+  "advancements.survival-dreams.ambush_warning.title": "Ten cuidado con que te roben",
+  "advancements.survival-dreams.ambush_warning.description": "Recibir el efecto Ambush",
+
+  "effect.survival-dreams.voided": "Vaciado",
+  "effect.survival-dreams.ambush": "Emboscada",
+  "effect.survival-dreams.immunity": "Inmunidad"
 }

@@ -5,14 +5,20 @@
   "item.survival-dreams.cheart": "Cheart",
   "item.survival-dreams.ender_key": "Ender key",
   "item.survival-dreams.keyhole": "Key Hole",
+  "item.survival-dreams.lunar_wand": "Lunar Wand",
+  "item.survival-dreams.crimson_membrane": "Crimson Membrane",
+  "item.survival-dreams.cheese_capra": "Capra Cheese",
+  "item.survival-dreams.mystery_bottle": "Mystery Bottle",
+  "item.survival-dreams.mystery_dust": "Mystery Dust",
   "item.survival-dreams.wildfire_spawn_egg": "Wildfire Spawn Egg",
   "item.survival-dreams.endersent_spawn_egg": "Endersent Spawn Egg",
   "item.survival-dreams.watchling_spawn_egg": "Watchling Spawn Egg",
   "item.survival-dreams.illusioner_spawn_egg": "Illusioner Spawn Egg",
+  "item.survival-dreams.phantom_familiar_spawn_egg": "Phantom Familiar Spawn Egg",
+
   "item.survival-dreams.wildfire_core": "Wildfire Core",
   "item.survival-dreams.sealed_end_portal_frame": "Sealed End Portal Frame",
   "item.survival-dreams.end_portal_anchor": "End Portal Anchor",
-
 
   "trim_pattern.survival-dreams.wildfire": "Wildfire",
   "trim_material.survival-dreams.wildfire_core": "Wildfire Core",
@@ -21,6 +27,7 @@
   "entity.survival-dreams.endersent": "Endersent",
   "entity.survival-dreams.endersent_default": "Endersent",
   "entity.survival-dreams.wildfire": "Wildfire",
+  "entity.survival-dreams.phantom_familiar": "Phantom Familiar",
   "entity.survivaldreams.wildfire.shields": "Shields",
   "entity.survivaldreams.steam_charge": "Steam Charge",
   "entity.survivaldreams.firesnowgolem": "Fire Snow Golem",
@@ -56,5 +63,19 @@
   "advancements.survival-dreams.golem_uprising_survived.title": "Guardian Against the Golems",
   "advancements.survival-dreams.golem_uprising_survived.description": "Survive a golem uprising and emerge victorious",
 
-  "effect.survival-dreams.voided": "Voided"
+  "advancements.survival-dreams.mystery_roulette.title": "Spin the Bottle",
+  "advancements.survival-dreams.mystery_roulette.description": "Drink a Mystery Bottle for the first time",
+
+  "advancements.survival-dreams.little_security.title": "A Little Security",
+  "advancements.survival-dreams.little_security.description": "Eat Capra Cheese",
+
+  "advancements.survival-dreams.lunar_wand.title": "Was the Moon Really Made of Cheese?",
+  "advancements.survival-dreams.lunar_wand.description": "Activate the Lunar Wand",
+
+  "advancements.survival-dreams.ambush_warning.title": "Watch Your Back",
+  "advancements.survival-dreams.ambush_warning.description": "Get hit by the Ambush effect",
+
+  "effect.survival-dreams.voided": "Voided",
+  "effect.survival-dreams.ambush": "Ambush",
+  "effect.survival-dreams.immunity": "Immunity"
 }

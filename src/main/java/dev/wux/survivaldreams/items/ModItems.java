@@ -8,9 +8,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import dev.wux.survivaldreams.ModEffects;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.DeathProtection;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
@@ -91,6 +93,75 @@ public class ModItems {
                                     net.minecraft.network.chat.Component.translatable("item.survival-dreams.wildfire_core.applies_to.armor")
                             ))
                     )
+    );
+
+    public static final Item LUNAR_WAND = register(
+            "lunar_wand",
+            LunarWand::new,
+            new Item.Properties()
+                    .stacksTo(1)
+                    .rarity(Rarity.RARE)
+    );
+
+    public static final Item CRIMSON_MEMBRANE = register(
+            "crimson_membrane",
+            Item::new,
+            new Item.Properties()
+                    .rarity(Rarity.RARE)
+    );
+
+    public static final Item CAPRA_CHEESE = register(
+            "cheese_capra",
+            Item::new,
+            new Item.Properties()
+                    .rarity(Rarity.RARE)
+                    .food(new net.minecraft.world.food.FoodProperties.Builder()
+                            .nutrition(4)
+                            .saturationModifier(1.4f)
+                            .alwaysEdible()
+                            .build())
+                    .component(
+                            DataComponents.CONSUMABLE,
+                            net.minecraft.world.item.component.Consumable.builder()
+                                    .onConsume(new ApplyStatusEffectsConsumeEffect(
+                                            new MobEffectInstance(MobEffects.REGENERATION, 260, 2),
+                                            1.0f
+                                    ))
+                                    .onConsume(new ApplyStatusEffectsConsumeEffect(
+                                            new MobEffectInstance(MobEffects.ABSORPTION, 2400, 1),
+                                            1.0f
+                                    ))
+                                    .onConsume(new ApplyStatusEffectsConsumeEffect(
+                                            new MobEffectInstance(ModEffects.IMMUNITY_HOLDER, 3000, 0),
+                                            1.0f
+                                    ))
+                                    .build()
+                    )
+    );
+
+    public static final Item MYSTERY_BOTTLE = register(
+            "mystery_bottle",
+            MysteryBottleItem::new,
+            new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(Rarity.RARE)
+                    .usingConvertsTo(Items.GLASS_BOTTLE)
+                    .component(
+                            DataComponents.CONSUMABLE,
+                            net.minecraft.world.item.component.Consumable.builder()
+                                    .animation(net.minecraft.world.item.ItemUseAnimation.DRINK)
+                                    .sound(net.minecraft.sounds.SoundEvents.GENERIC_DRINK)
+                                    .hasConsumeParticles(false)
+                                    .consumeSeconds(1.6f)
+                                    .build()
+                    )
+    );
+
+    public static final Item MYSTERY_DUST = register(
+            "mystery_dust",
+            Item::new,
+            new Item.Properties()
+                    .rarity(Rarity.UNCOMMON)
     );
 
     public static final Item SEALED_END_PORTAL_FRAME_ITEM = register(

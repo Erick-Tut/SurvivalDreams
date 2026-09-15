@@ -84,5 +84,9 @@
   },
   "endersent_teleport_smash": {
     "sounds": ["survival-dreams:endersent/teleport_smash"]
+  },
+
+  "lunar_wand_activate": {
+    "sounds": ["survival-dreams:lunar_wand/activate"]
   }
 }

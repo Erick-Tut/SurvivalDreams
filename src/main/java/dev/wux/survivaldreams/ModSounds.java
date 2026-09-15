@@ -38,6 +38,8 @@ public class ModSounds {
     public static final SoundEvent ENDERSENT_STUN = register("endersent_stun");
     public static final SoundEvent ENDERSENT_TELEPORT_SMASH = register("endersent_teleport_smash");
 
+    public static final SoundEvent LUNAR_WAND_ACTIVATE = register("lunar_wand_activate");
+
     private static SoundEvent register(String name) {
         Identifier id = Identifier.fromNamespaceAndPath(SurvivalDreams.MOD_ID, name);
         return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));

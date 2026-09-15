@@ -25,4 +25,10 @@ public class ModEntityModelLayers {
             "main"
     );
 
+    public static final ModelLayerLocation PHANTOM_FAMILIAR = new ModelLayerLocation(
+            Identifier.fromNamespaceAndPath(SurvivalDreams.MOD_ID, "phantom_familiar"),
+            "main"
+    );
+
+
 }

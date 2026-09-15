@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "survival-dreams:item/mystery_dust"
+  }
+}

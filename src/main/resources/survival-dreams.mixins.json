@@ -24,7 +24,10 @@
 		"DragonChargePlayerPhaseMixin",
 		"DragonLandingPhaseMixin",
 		"DragonFireballMixin",
-		"DragonStrafePlayerPhaseMixin"
+		"DragonStrafePlayerPhaseMixin",
+		"NaturalSpawnerMixin",
+		"ItemCooldownsAccessor",
+		"ImmunityMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

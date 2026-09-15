@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:crimson_membrane"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.ambush_warning.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.ambush_warning.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "got_ambushed": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "survival-dreams:ambush": {}
+        }
+      }
+    }
+  }
+}

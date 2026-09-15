@@ -3,10 +3,12 @@ package dev.wux.survivaldreams.client;
 import dev.wux.survivaldreams.entity.ModEntityTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.minecraft.client.model.monster.phantom.PhantomModel;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.SnowGolemRenderer;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.material.Fluids;
 
 public class SurvivalDreamsClient implements ClientModInitializer {
@@ -24,9 +26,15 @@ public class SurvivalDreamsClient implements ClientModInitializer {
 		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ENDERSENT_DEFAULT, EndersentModel::createBodyLayer);
 		EntityRenderers.register(ModEntityTypes.ENDERSENT_DEFAULT, EndersentDefaultRenderer::new);
 
+		EntityModelLayerRegistry.registerModelLayer(ModEntityModelLayers.PHANTOM_FAMILIAR, PhantomModel::createBodyLayer);
+		EntityRenderers.register(ModEntityTypes.PHANTOM_FAMILIAR, PhantomFamiliarRenderer::new);
+
 		EntityRenderers.register(ModEntityTypes.FIRESNOWGOLEM, SnowGolemRenderer::new);
 
 		EntityRenderers.register(ModEntityTypes.VOID_CHARGE, VoidChargeRenderer::new);
+
+		EntityRenderers.register(EntityType.LLAMA, MigoLlamaRenderer::new);
+		EntityRenderers.register(EntityType.TRADER_LLAMA, MigoLlamaRenderer::new);
 
 		EndersentSpawnerHighlightRenderer.register();
 
@@ -35,5 +43,8 @@ public class SurvivalDreamsClient implements ClientModInitializer {
 				Fluids.FLOWING_WATER,
 				SimpleFluidRenderHandler.coloredWater(0x9900CC)
 		);
+
+		WandClientNetworking.initializeClient();
+
 	}
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "survival-dreams:item/phantom_familiar_spawn_egg"
+  }
+}

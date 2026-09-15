@@ -6,7 +6,13 @@
 		"FoxRenderStateMixin",
 		"FoxRendererMixin",
 		"HappyGhastRenderStateMixin",
-		"HappyGhastRendererMixin"
+		"HappyGhastRendererMixin",
+		"SkyRendererMixin",
+		"FogRendererMixin",
+		"SkyRendererAccessor",
+		"SkyRendererMoonMixin",
+		"GuiAmbushIconMixin",
+		"EffectsInInventoryAmbushIconMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

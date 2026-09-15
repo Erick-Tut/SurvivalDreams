@@ -33,8 +33,7 @@ public class FearRemovalHandler {
                     || mob instanceof Phantom
                     || mob instanceof Piglin
                     || mob instanceof Cat
-                    || mob instanceof Ocelot
-                    || mob instanceof Villager;
+                    || mob instanceof Ocelot;
 
             if (!isTarget) return;
 

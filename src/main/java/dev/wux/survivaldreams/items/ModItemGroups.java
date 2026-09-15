@@ -30,6 +30,11 @@ public class ModItemGroups {
                         output.accept(ModItems.CHEART);
                         output.accept(ModItems.ENDER_KEY);
                         output.accept(ModItems.WILDFIRE_CORE);
+                        output.accept(ModItems.LUNAR_WAND);
+                        output.accept(ModItems.CRIMSON_MEMBRANE);
+                        output.accept(ModItems.CAPRA_CHEESE);
+                        output.accept(ModItems.MYSTERY_BOTTLE);
+                        output.accept(ModItems.MYSTERY_DUST);
 
                         output.accept(ModItems.SEALED_END_PORTAL_FRAME_ITEM);
                         output.accept(ModItems.KEYHOLE_ITEM);
@@ -39,6 +44,7 @@ public class ModItemGroups {
                         output.accept(ModSpawnEggs.ENDERSENT_SPAWN_EGG);
                         output.accept(ModSpawnEggs.WILDFIRE_SPAWN_EGG);
                         output.accept(ModSpawnEggs.ILLUSIONER_SPAWN_EGG);
+                        output.accept(ModSpawnEggs.PHANTOM_FAMILIAR_SPAWN_EGG);
                     })
                     .build()
     );

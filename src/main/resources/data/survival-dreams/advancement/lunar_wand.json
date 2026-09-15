@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:lunar_wand"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.lunar_wand.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.lunar_wand.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "activated_lunar_wand": {
+      "trigger": "survival-dreams:lunar_wand_activated"
+    }
+  }
+}

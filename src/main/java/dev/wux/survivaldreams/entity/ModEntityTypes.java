@@ -6,8 +6,6 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.FluidTags;
-import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.SpawnPlacements;
@@ -45,6 +43,13 @@ public class ModEntityTypes {
                     .clientTrackingRange(12)
     );
 
+    public static final EntityType<PhantomFamiliar> PHANTOM_FAMILIAR = register(
+            "phantom_familiar",
+            EntityType.Builder.of(PhantomFamiliar::new, MobCategory.MONSTER)
+                    .sized(0.9F, 0.5F)
+                    .clientTrackingRange(12)
+    );
+
     public static final EntityType<Firesnowgolem> FIRESNOWGOLEM = register(
             "firesnowgolem",
             EntityType.Builder.of(Firesnowgolem::new, MobCategory.MISC)
@@ -75,6 +80,7 @@ public class ModEntityTypes {
         FabricDefaultAttributeRegistry.register(WATCHLING, Watchling.createAttributes());
         FabricDefaultAttributeRegistry.register(ENDERSENT, Endersent.createAttributes());
         FabricDefaultAttributeRegistry.register(ENDERSENT_DEFAULT, EndersentDefault.createAttributes());
+        FabricDefaultAttributeRegistry.register(PHANTOM_FAMILIAR, PhantomFamiliar.createAttributes());
         FabricDefaultAttributeRegistry.register(FIRESNOWGOLEM, Firesnowgolem.createAttributes());
 
         SpawnPlacements.register(

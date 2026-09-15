@@ -1,8 +1,8 @@
 package dev.wux.survivaldreams.handler;
 
+import dev.wux.survivaldreams.handler.enchant.EnchantmentPools;
+import dev.wux.survivaldreams.handler.enchant.MobEnchantHelper;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
-import net.minecraft.core.Holder;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -15,10 +15,7 @@ import net.minecraft.world.entity.monster.zombie.ZombifiedPiglin;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.enchantment.Enchantment;
-import net.minecraft.world.item.enchantment.Enchantments;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MobRandomWeaponHandler {
@@ -34,10 +31,21 @@ public class MobRandomWeaponHandler {
             new WeightedMaterial(8, Items.DIAMOND_SWORD, Items.DIAMOND_AXE),
             new WeightedMaterial(3, Items.NETHERITE_SWORD, Items.NETHERITE_AXE)
 
-
     );
 
     private record WeightedMaterial(int weight, Item sword, Item axe) {}
+
+    private record WeightedTool(int weight, Item pickaxe, Item shovel, Item hoe) {}
+
+    private static final List<WeightedTool> TOOL_MATERIALS = List.of(
+            new WeightedTool(40, Items.WOODEN_PICKAXE, Items.WOODEN_SHOVEL, Items.WOODEN_HOE),
+            new WeightedTool(30, Items.STONE_PICKAXE, Items.STONE_SHOVEL, Items.STONE_HOE),
+            new WeightedTool(25, Items.IRON_PICKAXE, Items.IRON_SHOVEL, Items.IRON_HOE),
+            new WeightedTool(8, Items.DIAMOND_PICKAXE, Items.DIAMOND_SHOVEL, Items.DIAMOND_HOE),
+            new WeightedTool(3, Items.NETHERITE_PICKAXE, Items.NETHERITE_SHOVEL, Items.NETHERITE_HOE)
+    );
+
+    private static final float CHANCE_TO_HOLD_TOOL_INSTEAD = 0.10F;
 
     private record ArmorMaterial(int weight, Item head, Item chest, Item legs, Item feet) {}
 
@@ -51,23 +59,6 @@ public class MobRandomWeaponHandler {
     );
 
     private static final float CHANCE_PER_ARMOR_SLOT = 0.35F;
-
-    private static final List<net.minecraft.resources.ResourceKey<Enchantment>> ARMOR_ENCHANTS = List.of(
-            Enchantments.UNBREAKING,
-            Enchantments.PROTECTION,
-            Enchantments.FIRE_PROTECTION,
-            Enchantments.BLAST_PROTECTION
-    );
-
-    private static final List<net.minecraft.resources.ResourceKey<Enchantment>> WEAPON_ENCHANTS = List.of(
-            Enchantments.FIRE_ASPECT,
-            Enchantments.UNBREAKING,
-            Enchantments.SHARPNESS,
-            Enchantments.BANE_OF_ARTHROPODS
-    );
-
-    private static final float CHANCE_TO_BE_ENCHANTED = 0.12F;
-    private static final int[] ENCHANT_COUNT_WEIGHTS = {70, 25, 5};
 
     public static void register() {
         ServerEntityEvents.ENTITY_LOAD.register((entity, world) -> {
@@ -88,7 +79,7 @@ public class MobRandomWeaponHandler {
             if (random.nextFloat() < CHANCE_TO_HAVE_WEAPON) {
                 if (living.getItemBySlot(EquipmentSlot.MAINHAND).isEmpty()) {
                     ItemStack weapon = rollRandomWeapon(random);
-                    maybeEnchant(weapon, WEAPON_ENCHANTS, serverLevel, random);
+                    MobEnchantHelper.maybeEnchant(weapon, MobEnchantHelper.poolFor(weapon), serverLevel, random);
                     randomizeDurability(weapon, random);
                     living.setItemSlot(EquipmentSlot.MAINHAND, weapon);
                 }
@@ -105,28 +96,28 @@ public class MobRandomWeaponHandler {
             if (random.nextFloat() < CHANCE_PER_ARMOR_SLOT) {
                 ArmorMaterial mat = rollArmorMaterial(random);
                 ItemStack helmet = new ItemStack(mat.head());
-                maybeEnchant(helmet, ARMOR_ENCHANTS, serverLevel, random);
+                MobEnchantHelper.maybeEnchant(helmet, EnchantmentPools.HELMET, serverLevel, random);
                 randomizeDurability(helmet, random);
                 living.setItemSlot(EquipmentSlot.HEAD, helmet);
             }
             if (random.nextFloat() < CHANCE_PER_ARMOR_SLOT) {
                 ArmorMaterial mat = rollArmorMaterial(random);
                 ItemStack chest = new ItemStack(mat.chest());
-                maybeEnchant(chest, ARMOR_ENCHANTS, serverLevel, random);
+                MobEnchantHelper.maybeEnchant(chest, EnchantmentPools.CHESTPLATE, serverLevel, random);
                 randomizeDurability(chest, random);
                 living.setItemSlot(EquipmentSlot.CHEST, chest);
             }
             if (random.nextFloat() < CHANCE_PER_ARMOR_SLOT) {
                 ArmorMaterial mat = rollArmorMaterial(random);
                 ItemStack legs = new ItemStack(mat.legs());
-                maybeEnchant(legs, ARMOR_ENCHANTS, serverLevel, random);
+                MobEnchantHelper.maybeEnchant(legs, EnchantmentPools.LEGGINGS, serverLevel, random);
                 randomizeDurability(legs, random);
                 living.setItemSlot(EquipmentSlot.LEGS, legs);
             }
             if (random.nextFloat() < CHANCE_PER_ARMOR_SLOT) {
                 ArmorMaterial mat = rollArmorMaterial(random);
                 ItemStack feet = new ItemStack(mat.feet());
-                maybeEnchant(feet, ARMOR_ENCHANTS, serverLevel, random);
+                MobEnchantHelper.maybeEnchant(feet, EnchantmentPools.BOOTS, serverLevel, random);
                 randomizeDurability(feet, random);
                 living.setItemSlot(EquipmentSlot.FEET, feet);
             }
@@ -145,6 +136,10 @@ public class MobRandomWeaponHandler {
     }
 
     private static ItemStack rollRandomWeapon(RandomSource random) {
+        if (random.nextFloat() < CHANCE_TO_HOLD_TOOL_INSTEAD) {
+            return rollRandomTool(random);
+        }
+
         int roll = random.nextInt(100);
         int cumulative = 0;
         WeightedMaterial chosen = MATERIALS.get(0);
@@ -166,6 +161,36 @@ public class MobRandomWeaponHandler {
         }
     }
 
+    private static ItemStack rollRandomTool(RandomSource random) {
+        int typeRoll = random.nextInt(100);
+
+        if (typeRoll < 20) {
+            return new ItemStack(Items.SHEARS);
+        } else if (typeRoll < 40) {
+            return new ItemStack(Items.FISHING_ROD);
+        }
+
+        int roll = random.nextInt(100);
+        int cumulative = 0;
+        WeightedTool chosen = TOOL_MATERIALS.get(0);
+        for (WeightedTool tool : TOOL_MATERIALS) {
+            cumulative += tool.weight();
+            if (roll < cumulative) {
+                chosen = tool;
+                break;
+            }
+        }
+
+        int toolTypeRoll = random.nextInt(100);
+        if (toolTypeRoll < 34) {
+            return new ItemStack(chosen.pickaxe());
+        } else if (toolTypeRoll < 67) {
+            return new ItemStack(chosen.shovel());
+        } else {
+            return new ItemStack(chosen.hoe());
+        }
+    }
+
     private static ArmorMaterial rollArmorMaterial(RandomSource random) {
         int totalWeight = ARMOR_MATERIALS.stream().mapToInt(ArmorMaterial::weight).sum();
         int roll = random.nextInt(totalWeight);
@@ -175,35 +200,6 @@ public class MobRandomWeaponHandler {
             if (roll < cumulative) return mat;
         }
         return ARMOR_MATERIALS.get(0);
-    }
-
-    private static void maybeEnchant(ItemStack stack, List<net.minecraft.resources.ResourceKey<Enchantment>> pool, ServerLevel level, RandomSource random) {
-        if (random.nextFloat() >= CHANCE_TO_BE_ENCHANTED) return;
-
-        int count = rollEnchantCount(random);
-        var registry = level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
-
-        List<net.minecraft.resources.ResourceKey<Enchantment>> shuffled = new ArrayList<>(pool);
-        java.util.Collections.shuffle(shuffled, new java.util.Random(random.nextLong()));
-
-        int applied = 0;
-        for (net.minecraft.resources.ResourceKey<Enchantment> key : shuffled) {
-            if (applied >= count) break;
-            Holder<Enchantment> holder = registry.getOrThrow(key);
-            stack.enchant(holder, 1);
-            applied++;
-        }
-    }
-
-    private static int rollEnchantCount(RandomSource random) {
-        int total = ENCHANT_COUNT_WEIGHTS[0] + ENCHANT_COUNT_WEIGHTS[1] + ENCHANT_COUNT_WEIGHTS[2];
-        int roll = random.nextInt(total);
-        int cumulative = 0;
-        for (int i = 0; i < ENCHANT_COUNT_WEIGHTS.length; i++) {
-            cumulative += ENCHANT_COUNT_WEIGHTS[i];
-            if (roll < cumulative) return i + 1;
-        }
-        return 1;
     }
 
     private static void randomizeDurability(ItemStack stack, RandomSource random) {

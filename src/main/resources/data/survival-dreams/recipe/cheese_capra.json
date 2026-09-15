@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "HLH",
+    " E "
+  ],
+  "key": {
+    "E": "survival-dreams:crimson_membrane",
+    "H": "minecraft:egg",
+    "L": "minecraft:milk_bucket"
+  },
+  "result": {
+    "id": "survival-dreams:cheese_capra",
+    "count": 1
+  }
+}

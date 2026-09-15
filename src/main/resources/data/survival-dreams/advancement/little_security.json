@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "survival-dreams:cheese_capra"
+    },
+    "title": {
+      "translate": "advancements.survival-dreams.little_security.title"
+    },
+    "description": {
+      "translate": "advancements.survival-dreams.little_security.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "ate_capra_cheese": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": ["survival-dreams:cheese_capra"]
+        }
+      }
+    }
+  }
+}

@@ -3,7 +3,6 @@ package dev.wux.survivaldreams.entity;
 import dev.wux.survivaldreams.SurvivalDreams;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.entity.MobCategory;
 
 public class ModBiomeModifications {
@@ -24,7 +23,7 @@ public class ModBiomeModifications {
                         .or(BiomeSelectors.foundInTheNether()),
                 MobCategory.MONSTER,
                 ModEntityTypes.ENDERSENT_DEFAULT,
-                10,
+                5,
                 1, 1
         );
 
