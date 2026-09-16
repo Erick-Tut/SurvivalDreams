@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="100%" alt="Survival Dreams" src="https://github.com/user-attachments/assets/00058d53-1b62-4587-8354-b0f649f310d4" />
+</p>
+
 # Survival Dreams
 
 Survival, but harder. Like a dream. New mobs, greater risks, and things that shouldn't be there.
